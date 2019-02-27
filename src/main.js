@@ -8,19 +8,18 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import  'animate.css/animate.min.css'
 import './assets/keke-icon/iconfont.css'//引入自定义的icon
-import Vcharts from 't-charts' //全局引入
 import App from './App'
-import httpUrl from './assets/js/http.js';
+// import httpUrl from './assets/js/http.js';
 import axios from './assets/js/axios.js';
 import apiUrl from './assets/js/api.js';
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(ElementUI);
-Vue.use(Vcharts);
 
 Vue.prototype.$http = axios;
-Vue.prototype.httpUrl = httpUrl;
+Vue.prototype.httpUrl = process.env.BASE_API;
+console.log(Vue.prototype.httpUrl, 'Vue.prototype.httpUrl')
 Vue.prototype.apiUrl = apiUrl;
 //Vue.use(Vuex);
 

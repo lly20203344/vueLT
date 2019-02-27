@@ -13,10 +13,7 @@
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
     "element-ui": "^2.5.4",
-    "jquery": "^3.3.1",
-    "t-charts": "^1.2.6",
     "vue": "^2.5.2",
-    "vue-charts": "^0.2.1",
     "vue-echarts": "^4.0.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.0"
