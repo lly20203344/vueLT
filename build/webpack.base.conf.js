@@ -14,6 +14,7 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
+    vendor: ["element-ui"],
     app: './src/main.js'
   },
   output: {
@@ -22,6 +23,13 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
+  },
+  externals:{
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'vuex': 'Vuex',
+    'axios': 'axios',
+    'element-ui': 'ELEMENT',
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

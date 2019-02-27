@@ -1,31 +1,28 @@
-/**
- * Created by Administrator on 2018/1/17 0017.
- */
-import HomePage from '../page/login/home.vue'
-import login from '../page/login/login.vue'
-import index from '../page/login/index.vue'
+
+// import HomePage from '../page/login/home.vue'
+// import login from '../page/login/login.vue'
+// import index from '../page/login/index.vue'
 
 
-export  default {
+export default {
 
-  routes:[
+  routes: [
 
     {
-      path:'/HomePage',
-      component:HomePage,
-      children:[
-
+      path: '/HomePage',
+      component: () => import('../page/login/home.vue'),
+      children: [
         {
-          path:'/',
-          component:index
+          path: '/',
+          redirect: '/index',
         },
         {
-          path:'/index',
-          component:index
+          path: '/index',
+          component: () => import('../page/login/index.vue'),
         },
         {
-          path:'/toLogin',
-          component:login
+          path: '/toLogin',
+          component: () => import('../page/login/login.vue'),
         }
       ]
     },

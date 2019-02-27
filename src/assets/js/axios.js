@@ -1,5 +1,4 @@
 import axios from 'axios'
-import httpUrl from './http.js';
 import { Message } from 'element-ui';
 import router from '../../router';
 
@@ -7,7 +6,7 @@ var headers = {
   'Content-Type': 'application/x-www-form-urlencoded'
 };
 var instance = axios.create({
-  baseURL: httpUrl.api,
+  baseURL: process.env.BASE_API,
   timeout: 50000,
   transformRequest: [function (data) {
      let ret = ''

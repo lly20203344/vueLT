@@ -1,16 +1,7 @@
 <template>
   <div class="index">
-
-    <div class="section">
-      <div class="section1">
-        <div class="content">
-          <p>蓝图</p>
-          <p>Based on ElementUI</p>
-          <a class="toLink">GETING START</a>
-        </div>
-      </div>
+    <div class="banner-wapper">
     </div>
-
     <div class="section">
       <div style="width: 70%;height: 100%;margin:0 auto;">
         <el-row style="padding-top:100px;">
@@ -64,109 +55,78 @@
               </el-card>
             </div>
           </el-col>
+           <el-col :span="12">
+            <div class="temp">
+              <el-card :body-style="{padding:'0 20px'}">
+                <h2>Popular and hot</h2>
+                <img class="temp-img" src="../../assets/img/4.jpg"/>
+                <p class="temp-word">
+                  For the past few months, Vue.js has been a much talked about topic in the worlds of both pop culture and science.
+                </p>
+              </el-card>
+            </div>
+          </el-col>
+           <el-col :span="12">
+            <div class="temp">
+              <el-card :body-style="{padding:'0 20px'}">
+                <h2>Popular and hot</h2>
+                <img class="temp-img" src="../../assets/img/4.jpg"/>
+                <p class="temp-word">
+                  For the past few months, Vue.js has been a much talked about topic in the worlds of both pop culture and science.
+                </p>
+              </el-card>
+            </div>
+          </el-col>
+           <el-col :span="12">
+            <div class="temp">
+              <el-card :body-style="{padding:'0 20px'}">
+                <h2>Popular and hot</h2>
+                <img class="temp-img" src="../../assets/img/4.jpg"/>
+                <p class="temp-word">
+                  For the past few months, Vue.js has been a much talked about topic in the worlds of both pop culture and science.
+                </p>
+              </el-card>
+            </div>
+          </el-col>
+           <el-col :span="12">
+            <div class="temp">
+              <el-card :body-style="{padding:'0 20px'}">
+                <h2>Popular and hot</h2>
+                <img class="temp-img" src="../../assets/img/4.jpg"/>
+                <p class="temp-word">
+                  For the past few months, Vue.js has been a much talked about topic in the worlds of both pop culture and science.
+                </p>
+              </el-card>
+            </div>
+          </el-col>
+           <el-col :span="12">
+            <div class="temp">
+              <el-card :body-style="{padding:'0 20px'}">
+                <h2>Popular and hot</h2>
+                <img class="temp-img" src="../../assets/img/4.jpg"/>
+                <p class="temp-word">
+                  For the past few months, Vue.js has been a much talked about topic in the worlds of both pop culture and science.
+                </p>
+              </el-card>
+            </div>
+          </el-col>
         </el-row>
       </div>
     </div>
-    <div class="section">
-      <el-row style="padding-top: 150px;">
-        <el-col :span="12">
-          <ve-line :data="chartData" :settings="chartSettings"></ve-line>
-        </el-col>
-        <el-col :span="12">
-          <ve-histogram :data="chartData2" :settings="chartSettings2"></ve-histogram>
-
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="12">
-          <ve-pie :data="chartData3" :settings="chartSettings3"></ve-pie>
-        </el-col>
-        <el-col :span="12">
-          <ve-radar :data="chartData4" :settings="chartSettings4"></ve-radar>
-        </el-col>
-      </el-row>
-    </div>
-
-
   </div>
 </template>
 <script>
-  import ElCol from "element-ui/packages/col/src/col";
-  import ElRow from "element-ui/packages/row/src/row";
   export default{
     components: {
-      ElRow,
-      ElCol
     },
     name: '',
     data(){
       return {
-        height: '600px',
-        chartData: {
-          columns: ['日期', '销售额-1季度', '销售额-2季度', '占比', '其他'],
-          rows: [
-            {'日期': '1月1日', '销售额-1季度': 1523, '销售额-2季度': 1523, '占比': 0.12, '其他': 100},
-            {'日期': '1月2日', '销售额-1季度': 1223, '销售额-2季度': 1523, '占比': 0.345, '其他': 100},
-            {'日期': '1月3日', '销售额-1季度': 2123, '销售额-2季度': 1523, '占比': 0.7, '其他': 100},
-            {'日期': '1月4日', '销售额-1季度': 4123, '销售额-2季度': 1523, '占比': 0.31, '其他': 100},
-            {'日期': '1月5日', '销售额-1季度': 3123, '销售额-2季度': 1523, '占比': 0.12, '其他': 100},
-            {'日期': '1月6日', '销售额-1季度': 7123, '销售额-2季度': 1523, '占比': 0.65, '其他': 100}
-          ]
-        },
-        chartSettings: {},
-        chartData2: {
-          columns: ['日期', '成本', '利润', '占比', '其他'],
-          rows: [
-            {'日期': '1月1日', '成本': 1523, '利润': 1523, '占比': 0.12, '其他': 100},
-            {'日期': '1月2日', '成本': 1223, '利润': 1523, '占比': 0.345, '其他': 100},
-            {'日期': '1月3日', '成本': 2123, '利润': 1523, '占比': 0.7, '其他': 100},
-            {'日期': '1月4日', '成本': 4123, '利润': 1523, '占比': 0.31, '其他': 100}
-          ]
-        },
-        chartSettings2: {},
-
-        chartData3: {
-          columns: ['日期', '销售额-1季度', '销售额-2季度', '占比', '其他'],
-          rows: [
-            { '日期': '1月1日', '销售额-1季度': 1523, '销售额-2季度': 1523, '占比': 0.12, '其他': 100 },
-            { '日期': '1月2日', '销售额-1季度': 1223, '销售额-2季度': 1523, '占比': 0.345, '其他': 100 },
-            { '日期': '1月3日', '销售额-1季度': 2123, '销售额-2季度': 1523, '占比': 0.7, '其他': 100 },
-            { '日期': '1月4日', '销售额-1季度': 4123, '销售额-2季度': 1523, '占比': 0.31, '其他': 100 },
-            { '日期': '1月5日', '销售额-1季度': 3123, '销售额-2季度': 1523, '占比': 0.12, '其他': 100 },
-            { '日期': '1月6日', '销售额-1季度': 7123, '销售额-2季度': 1523, '占比': 0.65, '其他': 100 }
-          ]
-        },
-        chartSettings3: {
-          dimension: '日期',
-          metrics: '销售额-1季度',
-          dataType: 'KMB',
-          selectedMode: 'single',
-          hoverAnimation: false,
-          radius: 100,
-          offsetY: 200
-        },
-        chartData4: {
-          columns: ['日期', '销售额-1季度', '销售额-2季度', '占比', '其他'],
-          rows: [
-            {'日期': '1月1日', '销售额-1季度': 1523, '销售额-2季度': 1523, '占比': 0.12, '其他': 100},
-            {'日期': '1月2日', '销售额-1季度': 1223, '销售额-2季度': 1523, '占比': 0.345, '其他': 100},
-            {'日期': '1月3日', '销售额-1季度': 2123, '销售额-2季度': 1523, '占比': 0.7, '其他': 100},
-            {'日期': '1月4日', '销售额-1季度': 4123, '销售额-2季度': 1523, '占比': 0.31, '其他': 100},
-            {'日期': '1月5日', '销售额-1季度': 3123, '销售额-2季度': 1523, '占比': 0.12, '其他': 100},
-            {'日期': '1月6日', '销售额-1季度': 7123, '销售额-2季度': 1523, '占比': 0.65, '其他': 100}
-          ]
-        },
-        chartSettings4: {
-          dimension: ['日期'],
-          metrics: ['销售额-1季度', '销售额-2季度', '占比'],
-          dataType: {'占比': 'percent'}
-        }
-
       }
     },
     methods: {},
     created(){
-      this.height = $(window).height() + 'px';
+      // this.height = $(window).height() + 'px';
 
     }
   }
@@ -178,6 +138,7 @@
     width: 100%;
     margin: 0px;
     background: #ffffff;
+    overflow: hidden;
 
   }
 
@@ -254,5 +215,27 @@
     color: #ccc;
     font-size: 28px;
 
+  }
+
+  .banner-wapper{
+    width: 100%;
+    height: 640px;
+    background: url(https://dct-test.oss-cn-beijing.aliyuncs.com/dctpc/assets/img/index/index_bg.jpg) no-repeat center 0;
+    background-size: cover;
+  }
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
+  
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
   }
 </style>
