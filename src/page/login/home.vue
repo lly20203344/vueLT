@@ -13,7 +13,7 @@
               <router-link to="/index"  tag="li">新闻</router-link>
               <router-link to="/toLogin"  tag="li">关于</router-link>
               <router-link to="/index"  tag="li">APP</router-link>
-              <router-link to="/toLogin"   tag="li">登录</router-link>
+              <router-link to="/toLogin"   tag="li">去登录</router-link>
             </ul>
           </div>
         </el-col>
@@ -48,7 +48,7 @@
     },
     mounted(){
         $(".headnav>li").click(function () {
-          //切换动画
+          //切换动画  
           $(this).addClass("li-active").siblings("li").removeClass("li-active");
         });
     }
